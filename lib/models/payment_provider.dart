@@ -28,7 +28,10 @@ class PaymentProvider extends ChangeNotifier{
     }
 
     notifyListeners();
-
-
+  }
+  void reset() {
+    _status = PaymentStatus.idle;
+    _errorMessage = null;
+    notifyListeners();
   }
 }
